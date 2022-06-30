@@ -25,7 +25,6 @@ public class SuperHeroController : ControllerBase
         return Ok(heroes);
     }
 
-
     [HttpPost(Name = "PostSuperHero")]
     public async Task<IActionResult> Add(SuperHero hero)
     {
@@ -44,7 +43,6 @@ public class SuperHeroController : ControllerBase
         }
         return Ok(hero);
     }
-
 
     [HttpPut(Name = "PutSuperHero")]
     public async Task<IActionResult> Update(SuperHero hero)
@@ -73,5 +71,4 @@ public class SuperHeroController : ControllerBase
         var heroes = await _mongoDBService.GetAll();
         return Ok(heroes);
     }
-
 }

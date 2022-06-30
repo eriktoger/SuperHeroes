@@ -6,7 +6,6 @@ namespace MongoExample.Models;
 
 public class SuperHero
 {
-
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string Id { get; set; } = string.Empty;
@@ -15,7 +14,4 @@ public class SuperHero
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
     public string Place { get; set; } = null!;
-
-
-
 }
