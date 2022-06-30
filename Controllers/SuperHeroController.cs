@@ -2,11 +2,13 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using MongoExample.Services;
 using MongoExample.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SuperHeroAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class SuperHeroController : ControllerBase
 {
     private readonly MongoDBService _mongoDBService;
